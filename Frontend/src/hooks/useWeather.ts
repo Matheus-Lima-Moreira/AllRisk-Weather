@@ -3,7 +3,7 @@ import { Alert } from "react-native";
 import { searchWeatherByCity } from "../services/weatherService";
 import { CurrentWeather, DailyForecast } from "../types/weather";
 
-export function useWeather(initialCity = "Sao Paulo") {
+export function useWeather(initialCity = "") {
   const [city, setCity] = useState(initialCity);
   const [current, setCurrent] = useState<CurrentWeather | null>(null);
   const [forecast, setForecast] = useState<DailyForecast[]>([]);
